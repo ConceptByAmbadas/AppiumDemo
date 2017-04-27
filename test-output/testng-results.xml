@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="2" failed="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1003" started-at="2016-02-14T18:00:10Z" finished-at="2016-02-14T18:00:11Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1003" started-at="2016-02-14T18:00:10Z" finished-at="2016-02-14T18:00:11Z">
+      <class name="com.barclays.DemoTest">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.barclays.DemoTest@1df28bb]" name="setUp" is-config="true" duration-ms="0" started-at="2016-02-14T23:30:11Z" finished-at="2016-02-14T23:30:11Z">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[A new session could not be created. (Original error: Bad app: E:\360Security_3.0_.0_.1051_105013_1mobile5__signed.apk. App paths need to be absolute, or relative to the appium server install dir, or a URL to compressed file, or a special app name. cause: Error: Error locating the app: ENOENT, stat 'E:\360Security_3.0_.0_.1051_105013_1mobile5__signed.apk') (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 277 milliseconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'ambadas-PC', ip: '192.168.0.100', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_66'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Bad app: E:\360Security_3.0_.0_.1051_105013_1mobile5__signed.apk. App paths need to be absolute, or relative to the appium server install dir, or a URL to compressed file, or a special app name. cause: Error: Error locating the app: ENOENT, stat 'E:\360Security_3.0_.0_.1051_105013_1mobile5__signed.apk') (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 277 milliseconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'ambadas-PC', ip: '192.168.0.100', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_66'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:129)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:156)
+	at com.barclays.DemoTest.setUp(DemoTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="formTest()[pri:0, instance:com.barclays.DemoTest@1df28bb]" name="formTest" duration-ms="1" started-at="2016-02-14T23:30:11Z" finished-at="2016-02-14T23:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.barclays.DemoTest@1df28bb]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-02-14T23:30:11Z" finished-at="2016-02-14T23:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.barclays.DemoTest@1df28bb]" name="setUp" is-config="true" duration-ms="0" started-at="2016-02-14T23:30:11Z" finished-at="2016-02-14T23:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="loginTest()[pri:0, instance:com.barclays.DemoTest@1df28bb]" name="loginTest" duration-ms="1" started-at="2016-02-14T23:30:11Z" finished-at="2016-02-14T23:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.barclays.DemoTest@1df28bb]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-02-14T23:30:11Z" finished-at="2016-02-14T23:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.barclays.DemoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
