@@ -2,60 +2,62 @@ package com.Info;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class FirstTest {
 
-	private static RemoteWebDriver driver;
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+	public static RemoteWebDriver driver;
 
-		try
-		{
+	@Test
+	public void test() {
 
+		AppiumDriverLocalService service;
+		AppiumDriver<MobileElement> driver = null;
+		String path;
+		// service = AppiumDriverLocalService.buildDefaultService();
+		// service.start();
+		path = System.getProperty("user.dir");
 
-			//File appDir = new File("{pathApk file}");
-			//File classpathRoot = new File(System.getProperty("user.dir"));
-			///File appDir = new File(classpathRoot, "/Seleium_data/Appium_Data/");
-			//File app = new File(appDir, "360Security_3.0_.0_.1051_105013_1mobile5__signed.apk");
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability("device","Android");
-			capabilities.setCapability(CapabilityType.BROWSER_NAME,  "Andriod");
-			capabilities.setCapability("deviceName", "0123456789ABCDEF");
-			capabilities.setCapability(CapabilityType.VERSION, "4.2");
-			capabilities.setCapability("platformName", "Android");
-			// capabilities.setCapability("app", app.getAbsolutePath());
-			capabilities.setCapability("appPackage", "360Security_3.0_.0_.1051_105013_1mobile5__signed");
-			capabilities.setCapability("appActivity", "360Security_3.0_.0_.1051_105013_1mobile5__signed");
-			driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-
-			http://127.0.0.1:4723/wd/hub
-
-
-				//File classpathRoot = new File(System.getProperty("user.dir"));
-				//File appDir = new File(classpathRoot, "E:/Seleium_data/Appium_Data/");
-				//File app = new File(appDir, "360Security_3.0_.0_.1051_105013_1mobile5__signed.apk");
-
-				//	DesiredCapabilities capabilities = new DesiredCapabilities();
-				//capabilities.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
-				//capabilities.setCapability("deviceName", "Micromax A106");
-				//capabilities.setCapability("platformVersion", "4.4.2");
-				//capabilities.setCapability("platformName", "Android");
-				//capabilities.setCapability("app", app.getAbsolutePath());
-				//capabilities.setCapability("appPackage", "360Security_3.0_.0_.1051_105013_1mobile5__signed");
-				//capabilities.setCapability("appActivity", "360Security_3.0_.0_.1051_105013_1mobile5__signed");
-
-				//driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-				//driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-				Thread.sleep(10000);
-			//driver.quit();
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("device", "Android");
+		// capabilities.setCapability(CapabilityType.BROWSER_NAME, "Andriod");
+		capabilities.setCapability("deviceName", "MI");
+		capabilities.setCapability(CapabilityType.VERSION, "4.2");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("app", path + "//DemoAPK.apk");
+		try {
+			driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+		} catch (MalformedURLException ex) {
+			ex.printStackTrace();
 		}
-		catch(Exception ex)
-		{
-			System.out.println("error is"+ex.getMessage());
-		}
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.findElementByXPath("//android.widget.TextView[2]").click();
+		/*
+		 * try { Thread.sleep(100); } catch (InterruptedException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
+		driver.findElementByXPath("//android.widget.TextView[2]").click();
+		// Demos']").click();
+
+		// driver.findElement(By.xpath("//*[contains(text(), 'API
+
 	}
+
+	/*
+	 * @Test public void validate()
+	 *
+	 * driver.findElement(By.xpath(
+	 * "//android.widget.TextView[contains(@text, 'API Demos')]")).click();
+	 * driver.findElementByAccessibilityId("Accessibility").click(); }
+	 */
 }

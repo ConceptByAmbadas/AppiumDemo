@@ -77,7 +77,7 @@ public class DemoTest {
 																			// case
 																			// com.gorillalogic.monkeytalk.demo1
 		capabilities.setCapability("app-activity", ".{main activity class}"); // my
-																				// case
+																		// case
 																				// RootActivity
 		driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
